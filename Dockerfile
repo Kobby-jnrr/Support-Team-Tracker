@@ -14,8 +14,6 @@ RUN composer install --no-dev --optimize-autoloader
 
 RUN mkdir -p database && touch database/database.sqlite
 
-RUN php artisan key:generate
-
 EXPOSE 10000
 
 CMD php artisan serve --host=0.0.0.0 --port=10000
